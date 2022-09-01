@@ -1,0 +1,13 @@
+[Unit]
+Description=Display
+After=network.target
+
+[Service]
+ExecStart=/home/elhachon/temp/run.sh
+KillMode=process
+Restart=on-failure
+RestartSec=42s
+
+[Install]
+WantedBy=multi-user.target
+Alias=display.service
